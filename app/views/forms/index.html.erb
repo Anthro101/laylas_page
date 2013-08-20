@@ -1,0 +1,48 @@
+<div id="skip-link">
+  <a href="#company_description">Skip to main content</a>
+</div>
+
+<div id="form_wrapper">
+  <div id="form_header" role="banner">
+    <div class="form_girdle">
+      <h1>Form Templates</h1>
+        <span id="form_slogan">
+          <em>Ensuring the web remains accessible for all.</em>
+        </span>
+    </div>
+  </div>
+</div>
+  
+<nav role="navigation"><!-- navigation -->
+  <ul class="menu">
+    <li class="about_link">
+      <%= link_to 'Home Page', controller: "visitor" %>
+    </li>
+    <li class="info_link">  
+      <%= link_to "About Us", controller: "missions" %>
+    </li>
+    <li class="contact_link">
+      <%= link_to "Contact Us", controller: "posts" %>
+    </li>
+</nav>
+
+<table>
+  <tr>
+    <th>Choose a Form</th>
+  </tr>
+    <tr>
+      <td><%= link_to 'Employment Application Form (in HTML format)', "/forms/employment_form" %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'Employment Application Form (in Template format)', "/template_forms/employment_form" %></td>
+    </tr><br>
+    <tr>
+      <td><%= link_to 'Contact Us Form' %></td>
+    </tr><br>
+    <tr>
+      <td><%= link_to 'Mailing List Form' %></td>
+    </tr><br>
+    <tr>
+      <td><%= link_to 'Membership Form' %></td>
+    </tr><br>
+</table>

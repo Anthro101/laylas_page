@@ -1,0 +1,203 @@
+
+<!--LABELS MUST BE KEPT IN FOR ACCESSIBILITY PURPOSES FOR INDIVIDUALS WHO ARE BLIND. DO NOT REMOVE.-->
+  <div role="application">
+  <!-- This starts the beginning of the entire application form. -->
+  <form action="/index.html" method="post" class="form-inline" class="form_block"> 
+    <fieldset id="home_page" class="text-center"> <!-- THIS STARTS THE CREATE RESUME SECTION, FIRST ROW. -->
+      <div class="general_info">
+      <h1>Create Application</h1>
+        <label id="first" for "your_first_name"><strong>First Name</strong><span>*</span></label>
+        <input type="text" id="your_first_name" aria-labelledby="first" aria-describedby="first_name" aria-required="true"/>
+        <div id="first_name" class="tooltip" role="tooltip" aria-hidden="true">Your first name is required.</div>
+        <label id="last" for "your_last_name"><strong>Last Name</strong><span>*</span></label>
+        <input type="text" id="your_last_name" aria-labelledby="last" aria-describedby="last_name" aria-required="true"/> 
+        <div id="last_name" class="tooltip" role="tooltip" aria-hidden="true">Your last name is required.</div>
+      </div>       
+    <br>  
+<!-- SECOND ROW IN CREATE RESUME SECTION. -->
+      <div class="form-inline" class="text-center">
+        <label id="linkedIn" for "your_linked_in_account"><strong>Linked In</strong></label>
+        <input type="text" id="your_linked_in_account" aria-labelledby="linkedIn" aria-describedby="linkedIn_account" aria-required="false"/>
+        <div id="linkedIn_account" class="tooltip" role="tooltip" aria-hidden="true">Providing your Linked In account is optional.</div>
+        <label id="personal_website" for="your_website"><strong>Personal Website</strong></label>
+        <input type="text" id="your_website" aria-labelledby="personal_website" aria-describedby="website"  aria-required="false"/>
+        <div id="website" class="tooltip" role="tooltip" aria-hidden="true">Providing a personal website is optional.</div>
+        <label id="twitter" for="your_twitter_account"><strong>Twitter</strong></label>
+        <input type="text" id="your_twitter_account" aria-labelledby="twitter" aria-describedby="twitter_account" aria-required="false"/> 
+        <div id="twitter_account" class="tooltip" role="tooltip" aria-hidden="true">You are not required to provide a twitter account.</div>   
+      </div>
+    </fieldset>
+ <!--THIS ENDS THE GENERAL RESUME SECTION. -->           
+
+<!-- THIS STARTS THE CONTACT INFORMATION SECTION. -->
+    <fieldset>
+      <div class="contact" class="text-center" class="form-inline">
+        
+      <h2 id="contact_info_required" class="text-center">CONTACT INFORMATION</h2>
+        <label id="street" for="your_street_address"><strong>Street Address</strong></label>
+        <input type="text" id="your_street_address" aria-labelledby="street" aria-describedby="street_address" aria-required="false"/>
+        <div id="street_address" class="tooltip" role="tooltip" aria-hidden="true">Street address is not required.</div>
+        <label id="city" for="your_city"><strong>City</strong></label>
+        <input type="text" id="your_city" aria-labelledby="city" aria-describedby="city_name" aria-required="false"/>
+        <div id="city_name" class="tooltip" role="tooltip" aria-hidden="true">City is not required.</div> 
+        <label id="state" for="your_state"><strong>State</strong></label>
+        <input type="text" id="your_state" aria-labelledby="state" aria-describedby="state_name" aria-required="false"/>
+        <div id="state_name" class="tooltip" role="tooltip" aria-hidden="true">State is not required.</div>
+        <label id="zip_code" for="your_zipcode"><strong>Zip Code</strong></label>
+        <input type="text" id="your_zipcode" aria-labelledby="zip_code" aria-describedby="zip" aria-required="false"/>
+        <div id="zip" class="tooltip" role="tooltip" aria-hidden="true">Zip code is not required.</div>
+      <div class="text-center" class="form-inline"><br>
+        <label id="phone" for="your_phone_number"><strong>Phone Number</strong></label>
+        <input type="text" id="your_phone_number" aria-labelledby="phone" aria-describedby="phone_number" aria-required="false"/>
+        <div id="phone_number" class="tooltip" role="tooltip" aria-hidden="true">Your phone number is not required.</div>
+      </div> 
+      
+      </div>
+    </fieldset>
+ <!--THIS ENDS THE CONTACT INFORMATION SECTION. -->       
+
+<!--THIS STARTS THE EXPERIENCE SECTION. -->
+    <fieldset class="experience">
+      <h3 class="text-center"><legend>EXPERIENCE</legend></h3>
+        <div class="text-center" class="form-inline" class="experience_block">
+          <label for="company_name" class="organization_name"><strong>Organization</strong></label>
+          <input type="text" placeholder="e.g. University of Awesome"/>
+          <label for="type_of_project" class="project"><strong>Project</strong></label>
+          <input type="text" placeholder="e.g. Toy Story 3"/>
+          <label for="title_in_organization" class="role_in_org"><strong>Role/Title</strong></label>
+          <input type="text" placeholder="e.g. Project Manager"/> 
+        </div>
+    <br>
+        <div class="text-center" class="form-inline" class="experience_block"> 
+          <label for="company_location" class="location"><strong>Location of Organization</strong></label>
+          <input type="text" placeholder="e.g. Anywhere, CA"/>
+          <label for="hire_date" class="start_date"><strong>Start Date</strong></label>
+          <input type="text" placeholder="e.g. March 2010"/>
+          <label for="leave_date" class="end_date"><strong>End Date</strong>/label>
+          <input type="text" placeholder="e.g. May 2013"/>
+        </div>
+    <br>
+        <div class="text-center" class="responsibility_block">
+          <label for="job_description" class="job_description"><strong>Responsibilities</strong></label>
+            <div class="individual_responsibilities">
+            <input type="text" placeholder="e.g. Researched the role of mitochondrial DNA in mixed ancestry individuals."/>
+            </div>        
+        </div>
+    <br>       
+  <!--The following code duplicates the responsibilities block if needed.--> 
+        <span class="repeat_responsibility">
+          <div class="text-center">
+            <a href="#" class="responsibility_block_add"><strong>Add Another Responsibility</strong></a>
+          </div>
+        </span> 
+
+        <div class="text-center" class="form-inline">
+          <label for="volunteer_role">Volunteer</label>
+          <input type="checkbox"/>
+          <label for="internship_role">Internship</label>
+          <input type="checkbox"/>
+          <label for="professional_role">Professional</label>
+          <input type="checkbox"/>
+        </div>
+    <br>
+  <!--The following code duplicates the experience block if needed.-->      
+        <span class="repeat_experience">
+          <div class="text-center">
+            <a href="#" class="experience_block_add"><strong>ADD ANOTHER EMPLOYER</strong></a>
+          </div>
+        </span>       
+    </fieldset>
+<!-- ThIS ENDS THE EXPERIENCE SECTION. -->
+
+<!--THIS STARTS THE EDUCATION SECTION. -->
+    <fieldset class="education">
+      <h3 class="text-center"><legend>EDUCATION</legend></h3>
+        <div class="text-center" class="form-inline" class="education_block">
+          <label for="institution_name" class="school_name">Institution</label>
+          <input type="text" placeholder="e.g. Harvard"/>
+          <label for="type_of_degree" class="degree">Degree</label>
+          <input type="text" placeholder="e.g. B.S."/>
+          <label for="grade_point_average" class="gpa">GPA</label>
+          <input type="text" placeholder="e.g. 3.5"/>
+        </div>
+    <br>
+        <div class="text-center" class="form-inline">
+          <label for="school_major" class="major">Major</label>
+          <input type="text" placeholder="e.g. Anthropology"/>
+          <label for="school_minor" class="minor">Minor</label>
+          <input type="text" placeholder="e.g. History or N/A"/>
+          <label for="school_start_date" class="uni_start_date">Start Date</label>
+          <input type="text" placeholder="e.g. September 2000"/>
+          <label for="school_end_date" class="uni_end_date">End Date</label>
+          <input type="text" placeholder="e.g. May 2004"/>
+        </div>
+    <br>  
+  <!--The following code duplicates the education block if needed.-->     
+        <span class="repeat_education">
+          <div class="text-center">
+            <a href="#" class="education_block_add"><strong>ADD ANOTHER SCHOOL</strong></a>
+          </div>          
+        </span>            
+    <br>
+    </fieldset>
+<!-- ThIS ENDS THE EDUCATION SECTION. -->
+
+<!-- THIS STARTS THE SKILLS SECTION. -->
+    <fieldset class="skill_set">
+      <h3 class="text-center"><legend>SKILL SETS</legend></h3>
+        <div class="text-center" class="skill_block" class="skills">
+          <label for="name_of_skill" class="title">Skill Set Name</label>
+          <input type="text" placeholder="e.g. Photoshop"/>
+          <label for="skill_category" class="category">Category</label>
+          <input type="text" placeholder="e.g. Software"/>
+          <label for="experience_level" class="skill_experience">Skill Level</label>
+          <input type="text" placeholder="e.g. Proficient"/>
+        </div>   
+    <br>
+  <!--The following code duplicates the skills block if needed.--> 
+        <span class="repeat_skills">
+          <div class="text-center">
+            <a href="#" class="skill_block_add"><strong>ADD ANOTHER SKILL</strong></a>
+          </div>
+        </span>
+    </fieldset>
+<!-- THIS ENDS THE SKILLS SECTION. -->
+
+<!-- THIS STARTS THE ACCOMPLISHMENT/AWARD SECTION. -->
+    <fieldset class="awards">
+      <h3 class="text-center"><legend>ACCOMPLISHMENTS</legend></h3>
+        <div class="text-center" class="award_block" class="accomplishments">
+          <label for="accomplishment_description" class="description">Description</label>
+          <input type="text" placeholder="e.g. Scholarship award for demonstrated excellence in Anthropology."/>
+          <label for="date_of_accomplishment" class="award_date">Month/Year</label>
+          <input type="text" placeholder="e.g. May 2007"/>
+          <label for="name_of_acoomplishment" class="award_title">Title</label>
+          <input type="text" placeholder="e.g. Kokopelli Award"/>
+        </div>
+    <br>
+  <!--The following code duplicates the accomplishment/award block if needed.-->
+        <span class="repeat_awards">
+          <div class="text-center">
+            <a href="#" class="award_block_add"><strong>ADD ANOTHER ACCOMPLISHMENT</strong></a>
+          </div>
+        </span>
+    </fieldset>
+<!-- THIS ENDS THE ACCOMPLISHMENT/AWARD SECTION. -->
+    <fieldset id="password_block">
+      <div class="text-center" class="form-inline">
+        <label for="your_email" id="email"><strong>Email</strong></label>
+        <input type="text" placeholder="e.g. CadinSmith@gmail.com"/>
+    <br>    
+        <span for="help-block"><p class="text-center"><strong>Your email will be your primary ID.</strong></p></span>
+        <label for="password">Password</label>
+        <input type="text" placeholder="e.g. w0nderK^d!"/>
+    <br>
+    <br>
+      <button type="submit" class="btn btn-large btn-primary">Save &amp; Submit</button>
+      </div>
+    </fieldset>
+<!-- This is the end of the form. The following fieldset and form tags end the form. -->
+    </fieldset>
+  </form>
+</div>
+

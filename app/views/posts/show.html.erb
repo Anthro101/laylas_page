@@ -1,4 +1,26 @@
+<div id="skip-link">
+  <a href="#main-content" class="element-invisible element-focusable skip-nav">Skip to main content</a>
+</div>
 
+<div class="region region-topnav">
+  <nav role="navigation"><!-- navigation -->
+    <ul class="menu">
+      <li class="home_link">  
+        <%= link_to 'Home Page', controller: "visitor" %>
+      </li>
+      <li class="info_link">  
+        <%= link_to "About Us", controller: "missions" %>
+      </li>
+      <li class="content_link">
+        <%= link_to "Forms We Offer", controller: "forms" %>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h1>Comment On This Post</h1>
+
+  <%= link_to 'Return to List of Posts', posts_path %>
 <p>
   <strong>Title:</strong>
  <%= @post.title %>
@@ -32,12 +54,15 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>
+
+  <%= link_to 'Edit Post', edit_post_path(@post) %>
+
   <p>
     <%= f.submit %>
   </p>
 <% end %>
 
  
-<%= link_to 'Edit Post', edit_post_path(@post) %> |
-<%= link_to 'Go Back to Posts Page', posts_path %>
+
+
 

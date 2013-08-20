@@ -1,5 +1,26 @@
+<div id="skip-link">
+  <a href="#main-content" class="element-invisible element-focusable skip-nav">Skip to main content</a>
+</div>
+
+<div class="region region-topnav">
+  <nav role="navigation"><!-- navigation -->
+    <ul class="menu">
+      <li class="home_link">  
+        <%= link_to 'Home Page', controller: "visitor" %>
+      </li>
+      <li class="info_link">  
+        <%= link_to "About Us", controller: "missions" %>
+      </li>
+      <li class="content_link">
+        <%= link_to "Forms We Offer", controller: "forms" %>
+      </li>
+    </ul>
+  </nav>
+</div>
+
 <h1>Editing post</h1>
- 
+  <%= link_to 'Return to List of Posts', posts_path %>
+
 <%= form_for @post, url: post_path(@post) ,
 method: :patch do |f| %>
   <% if @post.errors.any? %>
@@ -28,4 +49,3 @@ method: :patch do |f| %>
   </p>
 <% end %>
  
-<%= link_to 'Back', posts_path %>

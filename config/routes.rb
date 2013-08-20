@@ -1,12 +1,21 @@
 LaylasPage::Application.routes.draw do
   get "visitor/index"
+  resources :posts do
+    resources :comments
+  end
+
+get "forms" => "forms#index"
+get "template_forms/:name" => "forms#template"
+get "forms/:name" => "forms#show"
+
+get "missions" => "missions#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'visitor#index'
-
+end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -55,4 +64,4 @@ LaylasPage::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

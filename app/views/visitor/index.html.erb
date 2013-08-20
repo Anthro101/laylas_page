@@ -1,34 +1,44 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-  <title>Layla's Page Home Page</title>
-</head>
 
-<body>
-  <section id="page_introduction">
-    <header role="banner"><!-- header -->
-      <h1>Welcome to Layla's Page!</h1>
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable skip-nav">Skip to main content</a>
+  </div>
 
-      <p>Founded in 2013, Layla's Page creates stream-lined, functional online forms with accessibility frameworks automatically built in. All of our forms are fully customizable and can be accessed by most screen readers and web browsers.</p>
-
-      <p>Your support of Layla's Page ensures the web remains accessible for everyone.</p>
-    </header>
-  </section>
-
-  <nav role="navigation"><!-- navigation -->
-    <a href="/">Our Mission Statement</a>
-    <%= link_to "Contact Us", controller: "posts" %>
-    <a href="/types_of_forms">Types of Forms We Offer</a>
-  </nav>
+  <div id="wrapper">
+    <div id="header" role="banner"><!-- header -->
+      <div class="girdle">
+        <h1>Welcome to Layla's Page!</h1>
+        <span id="slogan">
+          <em>Ensuring the web remains accessible for all.</em>
+        </span>
+      </div>
+      <div id="topNavigation">
+        <div class="girdle">
+          <div class="region region-topnav">
+            <div id="block-system-main-menu" class="block block-system block-menu">
+              <nav role="navigation"><!-- navigation -->
+                <ul class="menu">
+                  <li class="info_link">  
+                    <%= link_to "About Us", controller: "missions" %>
+                  </li>
+                  <li class="contact_link">
+                    <%= link_to "Contact Us", controller: "posts" %>
+                  </li>
+                  <li class="content_link">
+                    <%= link_to "Forms We Offer", controller: "forms" %>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="maincontent" role="main"><!-- main content -->
-    <%= image_tag("munchkins2.png", :alt => "Layla, at age 12, with her family") %>
+    <%= image_tag("munchkins.png", :alt => "Layla, at age twelve, with her family") %>
   </div>
 
   <footer role="contentinfo"><!-- footer -->
     <div>Copyright © 2013</div>
-    <div><a href="">Privacy Policy</div>
   </footer>
-</body>
-</html>

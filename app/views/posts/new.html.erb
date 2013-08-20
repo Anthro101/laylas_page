@@ -1,4 +1,27 @@
+<div id="skip-link">
+  <a href="#main-content" class="element-invisible element-focusable skip-nav">Skip to main content</a>
+</div>
+
+<div class="region region-topnav">
+  <nav role="navigation"><!-- navigation -->
+    <ul class="menu">
+      <li class="home_link">  
+        <%= link_to 'Home Page', controller: "visitor" %>
+      </li>
+      <li class="info_link">  
+        <%= link_to "About Us", controller: "missions" %>
+      </li>
+      <li class="content_link">
+        <%= link_to "Forms We Offer", controller: "forms" %>
+      </li>
+    </ul>
+  </nav>
+</div>
+
 <h1>New Post</h1>
+
+<%= link_to 'Return to List Of Posts', posts_path %>
+
 <%= form_for :post, url: posts_path do |f| %>
   <% if @post.errors.any? %>
   <div id="errorExplanation">
@@ -25,5 +48,3 @@
     <%= f.submit %>
   </p>
 <% end %>
-
-<%= link_to 'Go Back', posts_path %>
